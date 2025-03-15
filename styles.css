@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.video {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.video video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9/16; /* Maintain a 9:16 aspect ratio for portrait videos */
+}
+
+.video-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.video-info h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.video-info p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+body {  /* Ajout de la police de caractères Outfit */
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    background-color: #f0f0f0;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding-bottom: 20px; /* Ajoute de l'espace en bas pour le défilement */
+}
+
+.video {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.video video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9/16; /* Maintain a 9:16 aspect ratio for portrait videos */
+}
+
+.video-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.video-info h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.video-info p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+
+.outfit {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+html, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616;
+    overflow-y: auto; /* Permet le défilement vertical */
+    font-family: "Outfit", sans-serif;
+}
+
+/*button*/
+button 
+.btn {
+    padding: 15px 40px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}

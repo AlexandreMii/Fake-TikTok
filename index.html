@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <title>CSS Button Glow Effect</title>
+</head>
+<body>
+<button class="btn">Se connecter</button>
+</body>
+</html>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon TikTok</title>
+    <style>
+        body {
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .video {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .video img {
+            width: 100%;
+            height: auto;
+        }
+        .video-info {
+            padding: 10px;
+        }
+        .video-info h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .video-info p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bienvenue sur Mon TikTok</h1>
+        </div>
+        <div class="video-container" id="video-container">
+            <!-- Les vidéos seront chargées ici dynamiquement -->
+        </div>
+    </div>
+
+    <script>
+        // Exemple de chargement de vidéos dynamiquement
+        const video = [
+            { id: 1, title: "Vidéo 1", url: "https://via.placeholder.com/300" },
+            { id: 2, title: "Vidéo 2", url: "https://via.placeholder.com/300" },
+            { id: 3, title: "Vidéo 3", url: "https://via.placeholder.com/300" }
+        ];
+
+        // Assurez-vous que l'élément existe avant de l'utiliser
+        if (!videoContainer) {
+            console.error("L'élément avec l'ID 'video-container' est introuvable.");
+        } else {
+            // Utilisez simplement `videoContainer` ici sans le redéclarer
+            videos.forEach(video => {
+                const videoElement = document.createElement('div');
+                videoElement.classList.add('video');
+                videoElement.innerHTML = `
+                    <video controls>
+                        <source src="${video.url}" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                    <div class="video-info">
+                        <h2>${video.title}</h2>
+                        <p>Description de la vidéo</p>
+                    </div>
+                `;
+                videoContainer.appendChild(videoElement);
+            });
+        }
+
+        // Ajouter un écouteur d'événement pour le défilement
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            if (scrollPosition + windowHeight >= documentHeight) {
+                // Charger plus de vidéos lorsque l'utilisateur atteint le bas de la page
+                loadMoreVideos();
+            }
+        });
+
+        function loadMoreVideos() {
+            // Exemple de chargement de plus de vidéos
+            const newVideos = [
+                { id: 6, title: "Vidéo 6", url: "https://via.placeholder.com/300x400" },
+                { id: 7, title: "Vidéo 7", url: "https://via.placeholder.com/300x400" }
+            ];
+
+            newVideos.forEach(video => {
+                const videoElement = document.createElement('div');
+                videoElement.classList.add('video');
+                videoElement.innerHTML = `
+                    <video controls>
+                        <source src="${video.url}" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                    <div class="video-info">
+                        <h2>${video.title}</h2>
+                        <p>Description de la vidéo</p>
+                    </div>
+                `;
+                videoContainer.appendChild(videoElement);
+            });
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon TikTok</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        </div>
+        <div class="video-container" id="video-container">
+            <!-- Les vidéos seront chargées ici dynamiquement -->
+        </div>
+    </div>
+
+    <script>
+        // Exemple de chargement de vidéos dynamiquement
+        const videos = [
+            { id: 1, title: "Vidéo 1", url: "https://via.placeholder.com/300x400" },
+            { id: 2, title: "Vidéo 2", url: "https://via.placeholder.com/300x400" },
+            { id: 3, title: "Vidéo 3", url: "https://via.placeholder.com/300x400" },
+            { id: 4, title: "Vidéo 4", url: "https://via.placeholder.com/300x400" },
+            { id: 5, title: "Vidéo 5", url: "https://via.placeholder.com/300x400" }
+        ];
+
+        const videoContainer = document.getElementById('video-container');
+
+        videos.forEach(video => {
+            const videoElement = document.createElement('div');
+            videoElement.classList.add('video');
+            videoElement.innerHTML = `
+                <video controls>
+                    <source src="${video.url}" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+                <div class="video-info">
+                    <h2>${video.title}</h2>
+                    <p>Description de la vidéo</p>
+                </div>
+            `;
+            videoContainer.appendChild(videoElement);
+        });
+
+        // Ajouter un écouteur d'événement pour le défilement
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            if (scrollPosition + windowHeight >= documentHeight) {
+                // Charger plus de vidéos lorsque l'utilisateur atteint le bas de la page
+                loadMoreVideos();
+            }
+        });
+
+        function loadMoreVideos() {
+            // Exemple de chargement de plus de vidéos
+            const newVideos = [
+                { id: 6, title: "Vidéo 6", url: "https://via.placeholder.com/300x400" },
+                { id: 7, title: "Vidéo 7", url: "https://via.placeholder.com/300x400" }
+            ];
+
+            newVideos.forEach(video => {
+                const videoElement = document.createElement('div');
+                videoElement.classList.add('video');
+                videoElement.innerHTML = `
+                    <video controls>
+                        <source src="${video.url}" type="video/mp4">
+                        Votre navigateur ne supporte pas la balise vidéo.
+                    </video>
+                    <div class="video-info">
+                        <h2>${video.title}</h2>
+                        <p>Description de la vidéo</p>
+                    </div>
+                `;
+                videoContainer.appendChild(videoElement);
+            });
+        }
+    </script>
+</body>
+</html>
+
